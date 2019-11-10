@@ -25,6 +25,7 @@ class PokemonsController < ApplicationController
             @pokemon.update(trainer: current_trainer)
             redirect_to("/trainer/#{current_trainer}")
         else
+            flash[:error] = @pokemon.errors.full_messages.to_sentence
             redirect_to('/pokemons/new') and return
         end
         
