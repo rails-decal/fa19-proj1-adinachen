@@ -10,8 +10,9 @@
 [['Squirtle', 7], ['Charmander', 4], ['Bulbasaur', 1], ['Pikachu', 25]].each do |name, ndex|
   Pokemon.create(
     name: name,
-    level: rand(1..20),
+    level: 1,
     ndex: ndex,
+    health: 100
   )
 end
 
